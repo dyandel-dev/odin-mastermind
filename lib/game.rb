@@ -27,7 +27,6 @@ class Game
   end
 
   def run_game
-    puts "Mastermind Game"
     computer.generate_code
 
     rounds.times do |count|
@@ -37,6 +36,11 @@ class Game
         generate_feedback(index, guesses)
       end
       display_feedback
+      if computer.feedback.values.all?("BLACK")
+        break puts "Player WINS - The Player guess the code #{computer.code.values}"
+      end
+
+      puts "Computer WINS - The Player cannot guess the code #{computer.code.values}" if count == 11
     end
   end
 end
