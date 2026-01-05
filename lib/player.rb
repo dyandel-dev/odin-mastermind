@@ -9,4 +9,12 @@ class Player
     print "Code-#{code_number + 1}: "
     gets.chomp.downcase
   end
+
+  def ask_player
+    4.times do |index|
+      key = "code#{index + 1}".to_sym
+      value = get_guess(index)
+      guess[key] = value
+    end
+  end
 end

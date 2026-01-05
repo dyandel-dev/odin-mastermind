@@ -6,4 +6,5 @@ computer1.generate_code
 puts computer1.code
 
 player1 = Player.new
-player1.get_guess(0)
+player1.ask_player
+puts player1.guess
