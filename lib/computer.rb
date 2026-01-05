@@ -1,5 +1,5 @@
 class Computer
-  COLORS = %w[red blue green yellow orange purple].freeze
+  COLORS = %w[RED BLUE GREEN YELLOW ORANGE PURPLE].freeze
 
   attr_accessor :code, :feedback
 
@@ -24,5 +24,9 @@ class Computer
 
   def color_exist?(index, player_guess)
     code.value?(player_guess[create_key(index)])
+  end
+
+  def give_feedback(index, value)
+    feedback[create_key(index)] = value
   end
 end
