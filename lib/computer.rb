@@ -1,5 +1,5 @@
 class Computer
-  COLORS = %w[Red Blue Green Yellow Orange Purple].freeze
+  COLORS = %w[red blue green yellow orange purple].freeze
 
   attr_accessor :code
 
