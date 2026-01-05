@@ -1,11 +1,10 @@
 class Computer
   COLORS = %w[Red Blue Green Yellow Orange Purple].freeze
 
-  attr_accessor :code, :guess
+  attr_accessor :code
 
   def initialize
     @code = Hash.new(4)
-    @guess = Hash.new(4)
   end
 
   def generate_code
